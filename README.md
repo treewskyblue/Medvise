@@ -12,7 +12,7 @@ _(2025 전북대학교 SW경진대회 출품작)_
 
 ## 프로젝트 구조
 ```bash
-tpn-agent
+Medvise
 ├─chatbot-backend
 │  ├─utils
 │  │   ├─document_loader.py
