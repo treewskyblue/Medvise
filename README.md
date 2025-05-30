@@ -10,6 +10,10 @@ _(2025 전북대학교 SW경진대회 출품작)_
 
 ## 시연영상
 
+## 프로그램 실행 시 유의사항
+- Docker 프로그램이 필요합니다.
+- OpenAI API 키를 별도로 입력해야 합니다. `docker-compose.yml` 파일의 'chatbot-backend' section에서 "YOUR_API_KEY_HERE" 에다가 API 키를 입력한 후 실행하시기 바랍니다.
+
 ## 프로젝트 구조
 ```bash
 Medvise
