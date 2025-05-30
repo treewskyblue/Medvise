@@ -1,0 +1,26 @@
+# 웹 서버
+flask
+flask-cors
+requests
+python-dotenv
+
+# OpenAI
+openai
+
+# 벡터 DB
+chromadb
+
+# 임베딩
+sentence-transformers
+
+# 문서 처리 관련
+langchain-community
+langchain-core
+pdfplumber
+docx2txt
+pillow-heif
+pypdf2
+pdf2image
+pytesseract
+unstructured
+unstructured[pdf]

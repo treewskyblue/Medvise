@@ -1,0 +1,103 @@
+.input-area {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+textarea {
+    flex: 1;
+    resize: none;
+    min-height: 20px;
+    max-height: 120px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    outline: none;
+    transition: border-color 0.2s ease;
+    overflow-y: auto;
+}
+
+textarea:focus {
+    border-color: #3498db;
+}
+
+textarea:placeholder {
+    color: #aaa;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: 80px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not_allowed;
+}
+
+button.loading {
+    opacity: 0.7;
+}
+
+.help-text {
+    font-size: 0.75rem;
+    color: #95a5a6;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* 스크롤바 스타일링 */
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 모바일 반응형 디자인 */
+@media (max-width: 768px) {
+    .input-area {
+        padding: 0.75rem;
+    }
+
+    textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0 15px;
+        min-width: 70px;
+        font-size: 0.9rem;
+    }
+}

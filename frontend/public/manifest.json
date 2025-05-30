@@ -1,0 +1,8 @@
+{
+    "short_name": "TPN Chatbot",
+    "name": "TPN Supporting Chatbot",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#3498db",
+    "background_color": "#ffffff"
+}

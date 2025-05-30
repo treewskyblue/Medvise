@@ -1,0 +1,37 @@
+services:
+  ml-backend:
+    build:
+      context: ./ml-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./ml-backend:/app
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  chatbot-backend:
+    build: 
+      context: ./chatbot-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./chatbot-backend:/app
+    depends_on:
+      - ml-backend
+    environment:
+      - ML_API_URL=http://ml-backend:8000
+      - OPENAI_API_KEY=YOUR_API_KEY_HERE
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - chatbot-backend
+    restart: always
